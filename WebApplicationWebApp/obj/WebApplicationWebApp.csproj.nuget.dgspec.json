@@ -1,32 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\AbdullahFahadAlmaimo\\source\\AzureDemoIdentity\\WebApplicationWebApp\\WebApplicationWebApp.csproj": {}
+    "/Users/sera/Desktop/Workspaces/AzureDemoIdentity/WebApplicationWebApp/WebApplicationWebApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\AbdullahFahadAlmaimo\\source\\AzureDemoIdentity\\WebApplicationWebApp\\WebApplicationWebApp.csproj": {
+    "/Users/sera/Desktop/Workspaces/AzureDemoIdentity/WebApplicationWebApp/WebApplicationWebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\AbdullahFahadAlmaimo\\source\\AzureDemoIdentity\\WebApplicationWebApp\\WebApplicationWebApp.csproj",
+        "projectUniqueName": "/Users/sera/Desktop/Workspaces/AzureDemoIdentity/WebApplicationWebApp/WebApplicationWebApp.csproj",
         "projectName": "WebApplicationWebApp",
-        "projectPath": "C:\\Users\\AbdullahFahadAlmaimo\\source\\AzureDemoIdentity\\WebApplicationWebApp\\WebApplicationWebApp.csproj",
-        "packagesPath": "C:\\Users\\AbdullahFahadAlmaimo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\AbdullahFahadAlmaimo\\source\\AzureDemoIdentity\\WebApplicationWebApp\\obj\\",
+        "projectPath": "/Users/sera/Desktop/Workspaces/AzureDemoIdentity/WebApplicationWebApp/WebApplicationWebApp.csproj",
+        "packagesPath": "/Users/sera/.nuget/packages/",
+        "outputPath": "/Users/sera/Desktop/Workspaces/AzureDemoIdentity/WebApplicationWebApp/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\AbdullahFahadAlmaimo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/sera/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -44,12 +37,25 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.300"
+        }
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.Identity.Web": {
+              "target": "Package",
+              "version": "[4.0.1, )"
+            },
+            "Microsoft.Identity.Web.DownstreamApi": {
+              "target": "Package",
+              "version": "[4.0.1, )"
+            },
+            "Microsoft.Identity.Web.UI": {
+              "target": "Package",
+              "version": "[4.0.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -69,7 +75,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.415/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

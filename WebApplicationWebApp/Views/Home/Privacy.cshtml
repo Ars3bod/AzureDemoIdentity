@@ -1,6 +1,47 @@
-﻿@{
-    ViewData["Title"] = "Privacy Policy";
-}
-<h1>@ViewData["Title"]</h1>
+﻿@model IEnumerable<WebApplicationWebApp.Models.WeatherForecast>
 
-<p>Use this page to detail your site's privacy policy.</p>
+@{
+    ViewData["Title"] = "Secured Weather Forecast";
+}
+
+<h1>@ViewData["Title"]</h1>
+<p class="text-muted">This page requires a signed-in user and calls the protected API using your delegated access token.</p>
+
+@if (ViewData["ApiError"] is string errorMessage)
+{
+    <div class="alert alert-danger" role="alert">
+        Failed to load the forecast: @errorMessage
+    </div>
+}
+else if (Model is not null && Model.Any())
+{
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th scope="col">Date</th>
+                <th scope="col">Summary</th>
+                <th scope="col">°C</th>
+                <th scope="col">°F</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var forecast in Model)
+            {
+                <tr>
+                    <td>@forecast.Date.ToString("yyyy-MM-dd")</td>
+                    <td>@forecast.Summary</td>
+                    <td>@forecast.TemperatureC</td>
+                    <td>@forecast.TemperatureF</td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+}
+else
+{
+    <div class="alert alert-info" role="alert">
+        No forecast data was returned by the API.
+    </div>
+}

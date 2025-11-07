@@ -1,0 +1,27 @@
+@using Microsoft.AspNetCore.Authentication
+@using Microsoft.AspNetCore.Authentication.OpenIdConnect
+@using Microsoft.Identity.Web
+@inject MicrosoftIdentityConsentAndConditionalAccessHandler ConsentHandler
+
+@if (User?.Identity?.IsAuthenticated ?? false)
+{
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle text-dark" href="#" id="accountMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            @User.GetDisplayName()
+        </a>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="accountMenu">
+            <li>
+                <form asp-area="MicrosoftIdentity" asp-controller="Account" asp-action="SignOut" asp-route-returnUrl="~/" method="post" class="dropdown-item p-0">
+                    <button type="submit" class="btn btn-link w-100 text-start">Sign out</button>
+                </form>
+            </li>
+        </ul>
+    </li>
+}
+else
+{
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="MicrosoftIdentity" asp-controller="Account" asp-action="SignIn">Sign in</a>
+    </li>
+}
+
